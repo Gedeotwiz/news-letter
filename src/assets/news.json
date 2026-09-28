@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "category": "POLITICS",
+    "readTime": "6 MIN READ",
+    "title": "New Infrastructure Bill Passes in Landmark Vote, Reshaping National Policy",
+    "excerpt": "After months of negotiations, lawmakers approve the $1.2T infrastructure plan focused on roads, clean energy, and digital access, marking one of the largest investments in a decade.",
+    "author": "Sarah Chen",
+    "time": "2 hours ago",
+    "image": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "category": "TECHNOLOGY",
+    "readTime": "4 MIN READ",
+    "title": "AI Startup Unveils Next-Gen Model, Promises 40% Efficiency Gain",
+    "excerpt": "The new model aims to reduce energy consumption while scaling performance for enterprise clients.",
+    "time": "1 hours ago",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475"
+  },
+  {
+    "id": 3,
+    "category": "RELIGION",
+    "readTime": "5 MIN READ",
+    "title": "Faith Leaders Convene for Climate Dialogue in Geneva",
+    "excerpt": "Representatives from multiple faith traditions discuss environmental stewardship and policy collaboration.",
+    "time": "4 hours ago",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ZWSYh994IrYVL3EgLQhJsfCwAbh_Ro9JVZ77NsHSOZn-MIcAwJ1UiH7a&s=10"
+  },
+  {
+    "id": 4,
+    "category": "POLITICS",
+    "readTime": "3 MIN READ",
+    "title": "Senate Committee to Hold Hearing on Election Security Reforms",
+    "excerpt": "Witnesses from cybersecurity agencies scheduled to testify on upcoming measures.",
+    "time": "5 hours ago",
+    "image": "https://images.unsplash.com/photo-1541872703-74c5e44368f9"
+  }
+]
