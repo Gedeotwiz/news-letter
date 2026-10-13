@@ -34,15 +34,15 @@ function Header({ selectedCategory, onCategoryChange }) {
     <>
 
 
-      <div className="py-5 px-20 flex bg-white  justify-between items-center border-b-2 border-gray">
+      <div className="py-5 sm:px-5 md:px-20 flex bg-white  justify-between items-center border-b-2 border-gray">
         <div className="flex items-center">
           <img className="w-20 h-14" src={logo} alt="" />
           <div>
-            <h1 className="text-blue-900 font-bold">THE DAILY BRIEF</h1>
+            <h1 className="text-blue-900 font-bold sm:text-[12px]">THE DAILY BRIEF</h1>
             <p className="text-gray-400 text-[15px]">{toDay.toLocaleDateString("en-GB", { day: "2-digit", month: "2-digit", year: "numeric" })}</p>
           </div>
         </div>
-        <div className="flex gap-3 items-center">
+        <div className="flex flex-col sm:flex-row gap-3 items-center">
           <Button name="Log In" action={() => setIsLoginOpen(true)} border="border border-blue-900" textColor="text-blue-900" />
           <Button name="Subscribe" action={() => setIsSubscribeOpen(true)} background="bg-blue-900" textColor="text-white" />
         </div>
@@ -51,7 +51,7 @@ function Header({ selectedCategory, onCategoryChange }) {
       </div>
 
       <nav className="overflow-x-auto border-b border-gray-200 bg-white px-6 py-3 sm:px-12 lg:px-24" aria-label="Story categories">
-        <div className="flex min-w-max items-center gap-16">
+        <div className="flex flex-wrap sm:grid md:grid-cols-8 gap-2 sm:gap-4 md:gap-8 lg:gap-16">
           {items.map((item) => {
             return (
               <button

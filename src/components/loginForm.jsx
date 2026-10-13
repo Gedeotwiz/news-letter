@@ -1,17 +1,31 @@
 import { useState } from "react";
 import { IoIosClose } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+
 
 function LoginForm({ isClosed }) {
-    const [message, setMessage] = useState("");
+    const [loading, setLoading] = useState(false);
 
-    const handleSubmit = (event) => {
+    const handleSubmit =  (event) => {
         event.preventDefault();
-        setMessage("Login is not connected yet.");
-    };
+
+        if (loading) return;
+
+        setLoading(true);
+        setTimeout(()=>{
+            toast.success("Login successful!", {
+            position: "top-right",
+            autoClose: 3000,
+            theme: "light",
+        });
+        setLoading(false);
+        },3000)
+    }
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
+            <ToastContainer />
             <div
                 className="w-full max-w-md rounded-md bg-white p-6 shadow-xl sm:p-10"
                 role="dialog"
@@ -59,13 +73,11 @@ function LoginForm({ isClosed }) {
                     </div>
                     <button
                         type="submit"
-                        className="w-full rounded bg-blue-900 px-4 py-2 font-medium text-white hover:bg-blue-800"
+                        disabled={loading}
+                        className="w-full rounded bg-blue-900 px-4 py-2 font-medium text-white hover:bg-blue-800 disabled:cursor-not-allowed disabled:opacity-60"
                     >
-                        Log in
+                        {loading ? "Loading..." : "Log In"}
                     </button>
-                    <p className="min-h-5 text-center text-sm text-gray-600" role="status">
-                        {message}
-                    </p>
                 </form>
 
                 <p className="mt-3 text-center text-sm text-gray-700">

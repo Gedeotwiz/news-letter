@@ -11,11 +11,10 @@ function Layout(){
   document.title ="effect"
 },[])
     return (
-        <>
+        <div>
         <Header selectedCategory={selectedCategory} onCategoryChange={setSelectedCategory} />
         <Outlet context={{ selectedCategory }} />
-        
-        </>
+        </div>
     )
 }
 
